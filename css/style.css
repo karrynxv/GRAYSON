@@ -1,0 +1,409 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: PDR;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-nav ul a {
+    font-size: 12px;
+    color: #000;
+}
+
+.header-nav form {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header-nav input {
+    border: 1px solid #41A28E;
+    padding: 5.4px;
+    font-size: 14px;
+    color: #4B4848;
+}
+
+.header-nav button {
+    display: flex;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::after {
+    content: url(../img/dropdown.svg);
+}
+
+.dropdown__trigger {
+    position: absolute;
+    bottom: 1.5px;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    width: 160px;
+    gap: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms linear;
+    transform: translateY(-20px);
+}
+
+.dropdown-list li {
+    padding: 12px 30px;
+    border: 1px solid #E5E5E5;
+}
+
+.dropdown__trigger:checked~.dropdown-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown::after {
+    transform: scale(1.2);
+}
+
+/* div{
+    display: flex;
+    align-items: center;
+}
+div::before, div::after{
+    content: '';
+    width: 61px;
+    height: 1px;
+    display: block;
+    background: #C4C4C4;
+} */
+
+.header-content {
+    background: url(../img/headerBg.png);
+    height: 750px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.70);
+    padding: 17px 61px;
+}
+
+.header-content p {
+    font-size: 22px;
+    margin: 30px 0 50px;
+}
+
+.header-content a {
+    color: black;
+    background: white;
+    padding: 22px 35px;
+    font-size: 12px;
+    transition: 400ms;
+}
+
+.header-content a:hover {
+    color: white;
+    background: #41A28E;
+}
+
+.comm-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 52px;
+}
+
+.comm {
+    margin: 48px auto 72px;
+    text-align: center;
+}
+
+.comm-cards a {
+    position: relative;
+    overflow: hidden;
+}
+
+.comm-cards span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+    color: white;
+    background: rgba(75, 72, 72, 0.70);
+    font-size: 25px;
+    transform: translateY(100%);
+    transition: 400ms;
+}
+
+.comm-cards img {
+    width: 100%;
+    height: 100%;
+}
+
+.comm-cards a:hover span {
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 18px;
+}
+
+.comm p {
+    max-width: 496px;
+    color: #666;
+    margin: auto;
+    font-family: R4;
+}
+
+.project {
+    background: url(../img/projectBg.jpg);
+    background-size: cover;
+    height: 404px;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.project h2 {
+    margin-bottom: 22px;
+    color: white;
+}
+
+.project a {
+    background: white;
+    color: black;
+    padding: 23px 42px;
+    font-size: 12px;
+    display: inline-block;
+    transition: 400ms;
+}
+
+.project a:hover {
+    color: white;
+    background: #41A28E;
+}
+
+.custom {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.custom>p {
+    color: #666;
+    max-width: 496px;
+    margin: auto;
+    font-family: R4;
+}
+
+.custom-cards-el {
+    text-align: left;
+}
+
+.custom-cards-el p span {
+    text-decoration: line-through;
+    color: grey;
+    margin-right: 15px;
+}
+
+.custom-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 69px;
+}
+
+.custom-cards-el-info {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 43px;
+}
+
+.custom-cards-el-info>div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 19px;
+    background: rgba(0, 0, 0, 0.7);
+    transform: scaleY(-1);
+    opacity: 0;
+    transition: .4s;
+}
+
+.custom-cards-el-info:hover>div {
+    transform: scaleY(1);
+    opacity: 1;
+
+}
+
+.custom-cards-el-info>img {
+    display: block;
+}
+
+.custom-cards-el-info a {
+    color: white;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.custom-cards-el-info div div {
+    display: flex;
+    gap: 22px;
+}
+
+.custom h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.custom p {
+    font-size: 18px;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: 'liga'off;
+}
+
+.custom-cards-el-info span {
+    position: absolute;
+    padding: 10px 18px;
+    color: white;
+    background: #4B484B;
+    font-family: R4;
+    font-size: 12px;
+}
+
+.footer {
+    background: #000;
+    padding: 36px 0 0;
+}
+
+.footer .container {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-list,
+.footer-form {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.footer a {
+    color: white;
+    font-family: R4;
+    font-size: 14px;
+}
+
+.footer li {
+    margin-bottom: 13px;
+}
+
+.footer-list:last-of-type li {
+    margin-bottom: 9px;
+}
+
+.footer-list:last-of-type a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer p {
+    color: white;
+    font-family: R4;
+    margin: 20px 0;
+}
+
+.footer-form div {
+    display: flex;
+}
+
+.footer input {
+    padding: 14px 10px;
+    font-family: R4;
+}
+
+.footer button {
+    color: white;
+    background: #41A28E;
+    padding: 12px 10px;
+    cursor: pointer;
+    font-family: R4;
+}
+/* 
+.footer>p {
+    background: #121212;
+    padding: 40px 0;
+    margin: 40px 0 0;
+    text-align: center;
+    color: #666;
+    font-family: R4;
+    font-size: 18px;
+} */
+/* .footer>p span{
+text-shadow: 0px 0px 4px #E52D27;
+font-family: R4;
+
+} */
